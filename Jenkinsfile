@@ -34,7 +34,7 @@ pipeline {
         
         stage('Build Docker Image') {
             agent { 
-                label 'label'
+                label 'worker-slave'
             } 
             steps {
                 // Unstash artifacts on the slave node
@@ -46,7 +46,7 @@ pipeline {
         
         stage('Push to Docker Hub') {
             agent { 
-                label 'label'
+                label 'worker-slave'
             } 
             steps {
                 sh """
