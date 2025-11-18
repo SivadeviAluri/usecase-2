@@ -23,7 +23,7 @@ pipeline {
         stage('Terraform init') {
             steps {
                 sh '''
-                rm -rf Calci
+                rm -rf usecase-2
                 git clone https://github.com/SivadeviAluri/usecase-2.git
                 ls -R .
                 cd python
